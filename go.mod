@@ -3,7 +3,6 @@ module github.com/jesseduffield/lazycore
 go 1.18
 
 require (
-	github.com/jesseduffield/generics v0.0.0-20220320043834-727e535cbe68
 	github.com/samber/lo v1.31.0
 	github.com/stretchr/testify v1.8.0
 )
