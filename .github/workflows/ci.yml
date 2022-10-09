@@ -24,8 +24,6 @@ jobs:
             cache_path: ~\AppData\Local\go-build
     name: ci - ${{matrix.os}}
     runs-on: ${{matrix.os}}
-    env:
-      GOFLAGS: -mod=vendor
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -47,8 +45,6 @@ jobs:
           go test ./...
   lint:
     runs-on: ubuntu-latest
-    env:
-      GOFLAGS: -mod=vendor
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
