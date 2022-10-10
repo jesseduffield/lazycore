@@ -22,6 +22,7 @@ func Max(x, y int) int {
 	return y
 }
 
+// Clamp returns a value x restricted between min and max
 func Clamp(x int, min int, max int) int {
 	if x < min {
 		return min
