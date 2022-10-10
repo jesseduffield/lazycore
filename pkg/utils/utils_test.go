@@ -36,3 +36,9 @@ func TestMin(t *testing.T) {
 		assert.EqualValues(t, s.expected, Min(s.a, s.b))
 	}
 }
+
+func TestGetLazyRootDirectory(t *testing.T) {
+	assert.NotPanics(t, func() {
+		GetLazyRootDirectory()
+	})
+}
