@@ -22,7 +22,7 @@ func Max(x, y int) int {
 	return y
 }
 
-// GetLazyRootDirectory finds lazy project root directory.
+// GetLazyRootDirectory finds a lazy project root directory.
 //
 // It's used for cheatsheet scripts and integration tests. Not to be confused with finding the
 // root directory of _any_ random repo.
