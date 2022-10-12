@@ -37,6 +37,44 @@ func TestMin(t *testing.T) {
 	}
 }
 
+func TestClamp(t *testing.T) {
+	tests := []struct {
+		name string
+		x    int
+		min  int
+		max  int
+		want int
+	}{
+		{
+			"successX",
+			5,
+			1,
+			10,
+			5,
+		},
+		{
+			"successMin",
+			-5,
+			1,
+			10,
+			1,
+		},
+		{
+			"successMax",
+			15,
+			1,
+			10,
+			10,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			assert.Equal(t, tt.want, Clamp(tt.x, tt.min, tt.max))
+		})
+	}
+}
+
 func TestGetLazyRootDirectory(t *testing.T) {
 	assert.NotPanics(t, func() {
 		GetLazyRootDirectory()
